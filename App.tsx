@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Header from './components/Header';
-Header
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import Header from "./components/Header";
+import BookCard from "./components/BookCard";
+
 export default function App() {
   return (
-    <>
-      <div style={styles.container}><Header></Header></div>
-    </>
+    <View style={styles.wrapper}>
+      <View style={styles.container}>
+        <Header />
+      </View>
+      <View>
+        <BookCard />
+      </View>
+    </View>
+    
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  wrapper: {
     flex: 1,
-    backgroundColor: 'while',
-    height:'auto',
-    justifyContent:'center'
+  },
+  container: {
+    backgroundColor: "white",
+    justifyContent: "center",
   },
 });

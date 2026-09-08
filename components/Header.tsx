@@ -11,7 +11,7 @@ export default function Header() {
             <FontAwesome name="book" size={24} color="black" />
                 BookStore</Text>
         </View>
-        <div style={{display: 'flex', gap: '10px'}}>
+        <View style={{flexDirection: 'row', gap: 10}}>
             <View>
                 <Text>
                 <Feather name="search" size={24} color="black" />
@@ -23,14 +23,13 @@ export default function Header() {
                     Card
                 </Text>
             </View>
-        </div>
+        </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         flexDirection: 'row',
         backgroundColor: 'green',
         justifyContent: 'space-between',
